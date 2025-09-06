@@ -1,0 +1,28 @@
+@url=http://localhost:3000
+
+### calculos
+GET {{url}}/calculos
+
+### listado cuadrados
+GET {{url}}/calculos?tipo=cuadrado
+
+### listado rectangulos
+GET {{url}}/calculos?tipo=rectangulo
+
+### perimetro
+POST {{url}}/rectangulos/perimetros
+Content-Type: application/json
+
+{
+  "base": 10,
+  "altura": 5
+}
+
+### superficie 
+POST {{url}}/rectangulos/superficies
+Content-Type: application/json
+
+{
+  "base": 7,
+  "altura": 7
+}
