@@ -1,0 +1,35 @@
+### crear un alumno
+POST http://localhost:3000/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Javier",
+  "notas": [7, 8, 6]
+}
+
+### crear otro alumno
+POST http://localhost:3000/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Julian",
+  "notas": [9, 9, 8]
+}
+
+### listar alumnos
+GET http://localhost:3000/alumnos
+
+### consultar alumno
+GET http://localhost:3000/alumnos/Javier
+
+### modificar alumno
+PUT http://localhost:3000/alumnos/Julian
+Content-Type: application/json
+
+{
+  "nombre": "Julian",
+  "notas": [10, 9, 9]
+}
+
+### eliminar alumno
+DELETE http://localhost:3000/alumnos/Javier
