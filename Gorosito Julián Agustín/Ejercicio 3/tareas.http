@@ -1,0 +1,42 @@
+### crear una tarea pendiente
+POST http://localhost:3000/tareas
+Content-Type: application/json
+
+{
+  "nombre": "estudiar para el parcial",
+  "completada": false
+}
+
+### crear otra tarea
+POST http://localhost:3000/tareas
+Content-Type: application/json
+
+{
+  "nombre": "hacer las compras",
+  "completada": true   
+}
+
+### ver tareas
+GET http://localhost:3000/tareas
+
+### tareas completadas
+GET http://localhost:3000/tareas?completada=true
+
+### tareas pendientes
+GET http://localhost:3000/tareas?completada=false
+
+### tarea sin nombre
+POST http://localhost:3000/tareas
+Content-Type: application/json
+
+{
+  "completada": true
+}
+
+### crear tarea repetida
+POST http://localhost:3000/tareas
+Content-Type: application/json
+
+{
+  "nombre": "Estudiar para el parcial"
+}
